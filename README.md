@@ -30,20 +30,6 @@ Provisioning steps in `apigateway.tf`:
 6. Two `aws_api_gateway_deployment` resources deploy to `development` and `staging`.
 7. Outputs expose both invoke URLs.
 
-## Stack
-
-Terraform 1.x · AWS API Gateway (REST v1) · ap-northeast-1 (Tokyo)
-
-## Repository Layout
-
-```
-api-gateway-rest-scaffold-terraform/
-├── apigateway.tf               # API, resource, GET method, MOCK integration, two stages
-├── lambda-cli-examples.txt     # AWS CLI reference commands for related Lambda deployments
-├── .gitignore
-└── README.md
-```
-
 ## Prerequisites
 
 - Terraform >= 1.x
