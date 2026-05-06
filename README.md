@@ -2,23 +2,9 @@
 
 Minimal Terraform module that provisions an AWS API Gateway REST API (v1) with a single `GET` resource backed by a MOCK integration, deployed simultaneously to `development` and `staging` stages. Useful as a contract-first scaffold: lets you stand up DNS, CloudFront, and downstream consumers against a working endpoint before backend Lambdas exist.
 
-## How It Works
+## Architecture
+![Architecture Diagram](./architecture.png)
 
-```
-Client
-   |
-   | GET /<resource-path>
-   v
-API Gateway REST API
-   |
-   v
-MOCK integration
-   |
-   v
-HTTP 200 { "statusCode": 200 }
-
-Stages: /development and /staging (both deployed from the same definition)
-```
 
 Provisioning steps in `apigateway.tf`:
 
