@@ -1,12 +1,12 @@
 # Project # 23 - api-gateway-rest-scaffold-terraform
 
-Minimal Terraform module that provisions an AWS API Gateway REST API (v1) with a single `GET` resource backed by a MOCK integration, deployed simultaneously to `development` and `staging` stages. Useful as a contract-first scaffold: lets you stand up DNS, CloudFront, and downstream consumers against a working endpoint before backend Lambdas exist.
+Minimal Terraform module that provisions an AWS API Gateway REST API (v1) with a single `GET` resource backed by a MOCK integration, deployed simultaneously to `development` and `staging` stages. Useful as a contract-first scaffold. Lets you stand up DNS, CloudFront, and downstream consumers against a working endpoint before backend Lambdas exist.
 
 ## Architecture
 ![Architecture Diagram](./architecture.png)
 
 
-Provisioning steps in `apigateway.tf`:
+Provisioning steps in `main.tf`:
 
 1. `aws_api_gateway_rest_api` creates the REST API.
 2. `aws_api_gateway_resource` adds a path resource under the root.
